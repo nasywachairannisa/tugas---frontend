@@ -92,7 +92,7 @@ function cariId(daftarItem, id){
 
 // LANGKAH 4 — TERJEMAHKAN
 function saringKategori(daftarItem, kategori){
-    let hasil = []
+    let hasil = [   ]
 
     for (let item of daftarItem){
         if (item.kategori === kategori){

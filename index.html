@@ -1,13 +1,91 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Tugas 1A — buka Console (F12)</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menu Cafe</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-  <p>Semua hasil ada di <strong>Console</strong>: tekan F12 → tab Console.</p>
-  <!-- Jangan ubah urutan: data.js harus dimuat sebelum logika.js -->
-  <script src="data.js"></script>
-  <script src="logika.js"></script>
+<header>
+    <!-- NAV MEMBANTU USER PINDAH KE BAGIAN BERANDA ATAU MENU-->
+<nav>
+    <h1>
+        Coco cafe
+    </h1>
+    <a href="#beranda">Beranda</a>
+    <a href="#menu">Menu</a>
+</nav>
+
+</header>
+
+<main>
+    <!--section untuk memisahkan area menu agar tersturktur-->
+<section id="beranda">
+<h2>Pilih Minumanmu!</h2>
+</section>
+
+<section id="menu">
+<h2>Menu minuman</h2>
+
+<div class="daftar-menu">
+    <!-- setiap artikel mewakili 1 menu beserta informasinya-->
+<article class="kartu-menu">
+    <h3>Americano</h3>
+    <p>Kategori: Coffee</p>
+    <p>Harga: Rp12.000</p>
+    <p>Status: Tersedia</p>
+</article>
+
+
+<article class="kartu-menu">
+    <h3>Strawberry Milk</h3>
+    <p>Kategori: Non-Coffee</p>
+    <p>Harga: Rp24.000</p>
+    <p>Status: Tidak Tersedia</p>
+</article>
+
+
+<article class="kartu-menu">
+    <h3>Matcha Latte</h3>
+    <p>Kategori: Non-Coffee</p>
+    <p>Harga: Rp20.000</p>
+    <p>Status: Tersedia</p>
+</article>
+
+
+<article class="kartu-menu">
+    <h3>Aren Latte</h3>
+    <p>Kategori: Coffee</p>
+    <p>Harga: Rp22.000</p>
+    <p>Status: Tersedia</p>
+</article>
+
+
+<article class="kartu-menu">
+    <h3>Caramel macchiato</h3>
+    <p>Kategori: Coffee</p>
+    <p>Harga: Rp22.000</p>
+    <p>Status: Tidak tersedia</p>
+</article>
+
+
+<article class="kartu-menu">
+    <h3>Belgian Chocolate</h3>
+    <p>Kategori: Non-Coffee</p>
+    <p>Harga: Rp25.000</p>
+    <p>Status: Tersedia</p>
+</article>
+
+</div>
+</section>
+</main>
+<!-- footer berfungsi sebagai penutup-->
+<footer>
+    <h3>Terima kasih</h3>
+</footer>
 </body>
 </html>
