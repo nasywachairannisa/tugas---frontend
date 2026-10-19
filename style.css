@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    color: beige;
+}
+
+#beranda {
+    background-color: rgb(144, 139, 139);
+    padding: 10px;
+    text-align: center;
+}
+
+#menu {
+    background-color: rgb(59, 44, 44);
+    padding: 10px;
+}
+header {
+    background-color: rgb(71, 59, 44);
+    padding: 16px;    
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: beige;
+}
+
+footer {
+    background-color: rgb(58, 34, 4);
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* Grid satu kolom membuat kartu mudah dibaca di layar HP */
+.daftar-menu {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px;
+}
+
+/* Setiap kartu diberi ruang dan sudut membulat agar informasi mudah dibedakan */
+.kartu-menu {
+    background-color: rgb(21, 17, 10);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e0d2c3;
+}
+
+
+/* Dua kolom memanfaatkan ruang yang lebih luas pada tablet */
+@media (min-width: 768px) {
+    .daftar-menu {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tiga kolom memudahkan pengunjung membandingkan menu di laptop */
+@media (min-width: 1024px) {
+    .daftar-menu {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
