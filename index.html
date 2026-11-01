@@ -7,6 +7,113 @@
 
 <link rel="stylesheet" href="style.css">
 
+    <style>
+        body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    color: beige;
+}
+
+#beranda {
+    background-color: rgb(144, 139, 139);
+    padding: 10px;
+    text-align: center;
+}
+
+#menu {
+    background-color: rgb(59, 44, 44);
+    padding: 10px;
+}
+header {
+    background-color: rgb(71, 59, 44);
+    padding: 16px;    
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 20px;
+}
+
+.kanan {
+    text-align: right;
+    display: flex;
+    padding: 30px;
+    gap: 100px;
+
+    border-radius: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: beige;
+}
+
+footer {
+    background-color: rgb(58, 34, 4);
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* Grid satu kolom membuat kartu mudah dibaca di layar HP */
+.daftar-menu {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px;
+}
+
+/* Setiap kartu diberi ruang dan sudut membulat agar informasi mudah dibedakan */
+.kartu-menu {
+    background-color: rgb(21, 17, 10);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e0d2c3;
+}
+
+.habis {
+    opacity: 0.5;
+    border-color: red;
+}
+
+.tombol-filter {
+    background-color: rgb(250, 186, 186);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    color: aliceblue;
+}
+
+.tombol-filter:hover {
+    background-color: #2b2c27;
+    transition: 0.1s ease-in-out;
+}
+
+
+
+/* Dua kolom memanfaatkan ruang yang lebih luas pada tablet */
+@media (min-width: 768px) {
+    .daftar-menu {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tiga kolom memudahkan pengunjung membandingkan menu di laptop */
+@media (min-width: 1024px) {
+    .daftar-menu {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+    </style>
+
 </head>
 
 <body>
@@ -16,8 +123,10 @@
     <h1>
         Coco cafe
     </h1>
+    <div class="kanan">
     <a href="#beranda">Beranda</a>
     <a href="#menu">Menu</a>
+    </div>
 </nav>
 
 </header>
@@ -31,55 +140,14 @@
 <section id="menu">
 <h2>Menu minuman</h2>
 
-<div class="daftar-menu">
+<div class="filter">
+    <button class="tombol-filter" data-kategori="Semua">Semua</button>
+    <button class="tombol-filter" data-kategori="Coffee">Coffee</button>
+    <button class="tombol-filter" data-kategori="Non-Coffee">Non-Coffee</button>
+</div>
+
+<div class="daftar-menu" id="daftar-kartu">
     <!-- setiap artikel mewakili 1 menu beserta informasinya-->
-<article class="kartu-menu">
-    <h3>Americano</h3>
-    <p>Kategori: Coffee</p>
-    <p>Harga: Rp12.000</p>
-    <p>Status: Tersedia</p>
-</article>
-
-
-<article class="kartu-menu">
-    <h3>Strawberry Milk</h3>
-    <p>Kategori: Non-Coffee</p>
-    <p>Harga: Rp24.000</p>
-    <p>Status: Tidak Tersedia</p>
-</article>
-
-
-<article class="kartu-menu">
-    <h3>Matcha Latte</h3>
-    <p>Kategori: Non-Coffee</p>
-    <p>Harga: Rp20.000</p>
-    <p>Status: Tersedia</p>
-</article>
-
-
-<article class="kartu-menu">
-    <h3>Aren Latte</h3>
-    <p>Kategori: Coffee</p>
-    <p>Harga: Rp22.000</p>
-    <p>Status: Tersedia</p>
-</article>
-
-
-<article class="kartu-menu">
-    <h3>Caramel macchiato</h3>
-    <p>Kategori: Coffee</p>
-    <p>Harga: Rp22.000</p>
-    <p>Status: Tidak tersedia</p>
-</article>
-
-
-<article class="kartu-menu">
-    <h3>Belgian Chocolate</h3>
-    <p>Kategori: Non-Coffee</p>
-    <p>Harga: Rp25.000</p>
-    <p>Status: Tersedia</p>
-</article>
-
 </div>
 </section>
 </main>
@@ -87,5 +155,8 @@
 <footer>
     <h3>Terima kasih</h3>
 </footer>
+<script src="data.js"></script>
+<script src="tampilan.js"></script>
 </body>
 </html>
+
